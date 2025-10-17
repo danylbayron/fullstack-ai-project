@@ -6,15 +6,12 @@ import {
   TagList,
   Pagination,
   FeedTabs,
-  useArticles,
   useTags,
   useGlobalArticles,
   useFeedArticles,
   useArticlesByTag,
   ArticleFeedType,
-  ArticleQuerySchema,
-  PaginationSchema,
-} from "../shared";
+} from "./home";
 
 export default function Home() {
   // State management
@@ -26,20 +23,6 @@ export default function Home() {
   // Query parameters
   const itemsPerPage = 10;
   const offset = (currentPage - 1) * itemsPerPage;
-
-  // Query parameters object
-  const queryParams = useMemo(() => {
-    const baseQuery = {
-      limit: itemsPerPage,
-      offset,
-    };
-
-    if (selectedTag) {
-      return { ...baseQuery, feed: "tag" as const, tag: selectedTag };
-    }
-
-    return { ...baseQuery, feed: activeFeed };
-  }, [activeFeed, selectedTag, itemsPerPage, offset]);
 
   // Data fetching hooks
   const {
