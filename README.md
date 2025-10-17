@@ -14,6 +14,20 @@ For more information on how to this works with other frontends/backends, head ov
 
 > Describe the general architecture of your app here
 
+## Frontend Architecture
+
+- **Principles:** SOLID principles guide our code structure and development practices.
+- **Structure:** Follows a modular, resource-based pattern inspired by NestJS. Each resource/page has its own directory containing components, hooks, and API logic.
+- **Shared Code:** Common functionality is placed in a `shared` folder.
+- **Naming Convention:** All files and folders use dash-case (e.g., `dash-case`) for consistency and readability.
+
+## Backend Architecture
+
+- **Principles:** Implements SOLID principles to ensure maintainable and scalable code.
+- **Structure:** Organized into modules, each representing a resource, following NestJS best practices.
+- **Shared Code:** Shared logic and utilities are grouped in appropriately named shared modules.
+- **Naming Convention:** Uses dash-case (e.g., `dash-case`) for all file and directory names, ensuring uniformity throughout the backend.
+
 # Getting started
 
 > npm install, npm start, etc.
